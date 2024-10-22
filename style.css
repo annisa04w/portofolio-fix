@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -285,45 +284,89 @@ section {
 }
 
 
-.project-container {
-    background-color: rgb(252, 98, 157);
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 40px; /* Jarak antara judul dan kartu proyek */
-}
-.card img{
-    width: 400px;
-    object-fit: cover;
-    border-radius: 8px;
+/* Styling untuk bagian project */
+.project-h1 {
+    text-align: center; /* Menengahkan tulisan */
+    font-size: 28px;    /* Ukuran font untuk heading */
+    margin-bottom: 20px; /* Memberikan jarak bawah */
+    color: #040404;        /* Warna teks */
 }
 
-.project {
-    display: flex;
-    gap: 20px; /* Jarak antara tiap kartu */
-    justify-content: center; /* Pusatkan kartu */
+.project {      
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom */
+    gap: 40px; /* Jarak antar kotak (horizontal dan vertical) */
+    padding: 50px 0;
+    justify-content: center; /* Menempatkan grid di tengah */
 }
 
 .card {
-    height: fit-content;
-    width: 100%; /* Ukuran tetap */
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #f5f5f5; /* Warna latar belakang kotak */
+    padding: 15px;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
-    transition: transform 0.3s ease; /* Menambahkan transisi */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease;
+    max-width: 300px; /* Lebar maksimal kotak */
+    margin: auto; /* Memusatkan kotak */
 }
 
+.card img {
+    width: 80%; /* Mengecilkan gambar */
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.card p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Efek hover pada kotak project */
 .card:hover {
-    transform: translateY(-5px); /* Efek angkat pada hover */
+    transform: translateY(-10px);
 }
 
-.project-h1 {
-    font-size: 2rem; /* Ukuran tetap */
-    color: white;
+/* Media query untuk responsivitas */
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+    }
 }
+
+
+.card p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Efek hover pada kotak project */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Untuk memastikan desain responsif */
+@media screen and (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom pada layar kecil */
+        gap: 20px; /* Mengurangi gap pada layar kecil */
+    }
+}
+
+
+/* Untuk memastikan desain responsif */
+@media screen and (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom pada layar kecil */
+    }
+}
+
 
 /* contact section styling */
 .contact-container {
@@ -444,3 +487,10 @@ footer{
     margin-left: 20px;   /* Spasi di kiri */
     margin-right: 20px;  /* Spasi di kanan */
 }
+
+/* ---------- SCROLLBARS ---------- */
+  ::-webkit-scrollbar-thumb {
+    color: #e73189;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+  }
