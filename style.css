@@ -69,10 +69,25 @@
     padding: 100px 0; /* Padding horizontal */
     gap: 250px;
 }
-.column_right img{
-    width: 200px;
-    border-radius: 20%;
+.column_right {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Pusatkan gambar */
+    margin: 0 auto; /* Mengatur agar kolom gambar berada di tengah */
+    padding: 100px;
 }
+
+.column_right img {
+    width: 180px; /* Atur ukuran gambar sesuai kebutuhan */
+    border-radius: 15%; /* Membuat bentuk lebih halus */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Menambahkan bayangan untuk efek profesional */
+    transition: transform 0.3s ease; /* Efek animasi */
+}
+
+.column_right img:hover {
+    transform: scale(1.05); /* Memperbesar sedikit gambar saat dihover */
+}
+
 .home .max-width {
     margin: auto 0 auto 40px;
 }
