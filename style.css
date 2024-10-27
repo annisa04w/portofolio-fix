@@ -458,7 +458,11 @@ footer{
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
 }
-
+.social-icons img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+    filter: brightness(0.9);
+}
 
 /* Hover effect for icons */
 .social-icons img:hover {
@@ -494,3 +498,22 @@ footer{
     border-radius: 10px;
     scroll-behavior: smooth;
   }
+  /* project section styling */
+.project {      
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+    gap: 40px; /* Jarak antar kotak (horizontal dan vertical) */
+    padding: 50px 0;
+    justify-content: center; /* Menempatkan grid di tengah */
+}
+@media (max-width: 1024px) {
+    .project {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar medium */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+    }
+}
