@@ -309,10 +309,11 @@ section {
 
 .project {      
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom */
-    gap: 40px; /* Jarak antar kotak (horizontal dan vertical) */
-    padding: 50px 0;
-    justify-content: center; /* Menempatkan grid di tengah */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif: Menyesuaikan kolom */
+    gap: 40px; /* Jarak antar kotak */
+    justify-content: center; /* Menempatkan grid di tengah secara horizontal */
+    align-items: center; /* Menempatkan elemen di tengah secara vertikal */
+    padding: 50px 0; /* Memberikan spasi di atas dan bawah */
 }
 
 .card {
