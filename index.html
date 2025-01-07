@@ -115,65 +115,73 @@
     </section>
     <section class="project-container" id="projects">
         <h1 class="project-h1">My Projects</h1>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button data-filter="all">All</button>
+            <button data-filter="certificate">Certificates</button>
+            <button data-filter="game">Games</button>
+            <button data-filter="app">Apps</button>            
+        </div>
+
         <div class="project">
             <a href="https://adminproject-phi.vercel.app/">
-                <div class="card">
+                <div class="card app">
                     <img src="gambar/nisa2.jpg" alt="Project 1">
                     <h3>Project 1</h3>
                     <p>Login Form</p>
                 </div>
             </a>
             <a href="https://kalkulator-one-xi.vercel.app/">
-                <div class="card">
+                <div class="card app">
                     <img src="gambar/kalkulator.png" alt="Project 2">
                     <h3>Project 2</h3>
                     <p>Kalkulator</p>
                 </div>
             </a>
             <a href="https://dasboard1-jade.vercel.app/">
-                <div class="card">
+                <div class="card app">
                     <img src="gambar/dasboardfix.png" alt="Project 3">
                     <h3>Project 3</h3>
                     <p>Dasboard Diagram</p>
                 </div>
             </a>
             <a href="https://www.sololearn.com/certificates/CC-3KKUBKPX">
-                <div class="card">
+                <div class="card certificate">
                     <img src="gambar/html.jpg" alt="Project 4">
                     <h3>Project 4</h3>
                     <p>Certificates Introduction to HTML</p>
                 </div>
             </a>
             <a href="https://www.sololearn.com/certificates/CC-3XONXDD4">
-                <div class="card">
+                <div class="card certificate">
                     <img src="gambar/css.jpg" alt="Project 5">
                     <h3>Project 5</h3>
                     <p>Certificates Introduction to CSS</p>
                 </div>
             </a>
             <a href="https://www.sololearn.com/certificates/CC-9F9Z2DCF">
-                <div class="card">
+                <div class="card certificate">
                     <img src="gambar/intro js.png" alt="Project 6">
                     <h3>Project 6</h3>
                     <p>Certificates Introduction to JavaScript </Script></p>
                 </div>
             </a>
             <a href="https://www.sololearn.com/certificates/CC-2LBNDSQL">
-                <div class="card">
+                <div class="card certificate">
                     <img src="gambar/js intermediate.png" alt="Project 7">
                     <h3>Project 7</h3>
                     <p>Certificates Intermediate to JavaScript</p>
                 </div>
             </a>
             <a href="https://snakegame-nu-eight.vercel.app/">
-                <div class="card">
+                <div class="card game">
                     <img src="gambar/snake game.png" alt="Project 8">
                     <h3>Project 8</h3>
                     <p>Snake Game</p>
                 </div>
             </a>
             <a href="https://tabel-amber.vercel.app/">
-                <div class="card">
+                <div class="card app">
                     <img src="gambar/tabel diagram.png" alt="Project 9">
                     <h3>Project 9</h3>
                     <p>tabel dan diagram</p>
@@ -242,4 +250,29 @@
         <p>&copy; 2024 Annisa Widya Sudarto. All rights reserved.</p>
     </footer>  
 </body>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    // Ambil semua tombol filter
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    
+    // Ambil semua kartu proyek
+    const cards = document.querySelectorAll('.card');
+    
+    // Tambahkan event listener untuk setiap tombol filter
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterCategory = button.getAttribute('data-filter'); // Ambil kategori filter
+
+            // Tampilkan atau sembunyikan kartu berdasarkan kategori
+            cards.forEach(card => {
+                if (filterCategory === 'all' || card.classList.contains(filterCategory)) {
+                    card.style.display = 'block'; // Tampilkan kartu jika sesuai kategori
+                } else {
+                    card.style.display = 'none'; // Sembunyikan kartu jika tidak sesuai
+                }
+            });
+        });
+    });
+});
+</script>
 </html>

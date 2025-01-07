@@ -543,3 +543,27 @@ footer{
     padding: 20px;
     background-color: #f7f7f7; /* light background */
 }
+.filter-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #e73189;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: #e73189;
+}
+
+.card {
+    display: block;
+    margin: 10px;
+}
