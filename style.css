@@ -533,3 +533,13 @@ footer{
         grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
     }
 }
+.location-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* light background */
+}
+.heading{
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* light background */
+}
